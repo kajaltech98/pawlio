@@ -1,0 +1,500 @@
+/* ==========================================================================
+   PAWLIO APPOINTMENT DEMO PAYMENT STYLES
+   Professional Demo Mode Payment Flow & Confirmation
+   ========================================================================== */
+
+/* Demo Mode Notice Badge */
+.demo-mode-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  color: #92400e;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.demo-mode-banner-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  color: #b45309;
+}
+
+.demo-mode-banner strong {
+  font-weight: 700;
+  color: #78350f;
+}
+
+/* Appointment Summary Card */
+.demo-summary-card {
+  background: #f8fafc;
+  border: 1.5px solid #e2eae7;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.demo-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.demo-summary-row strong {
+  color: #12312d;
+  font-weight: 600;
+  text-align: right;
+}
+
+.demo-summary-divider {
+  height: 1px;
+  background: #e2eae7;
+  margin: 4px 0;
+}
+
+.demo-summary-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  color: #12312d;
+}
+
+.demo-summary-total-amount {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f766e;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.5px;
+}
+
+/* Payment Method Tabs */
+.demo-methods-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.demo-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.demo-method-btn {
+  background: #ffffff;
+  border: 1.5px solid #e2eae7;
+  border-radius: 10px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.demo-method-btn:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.demo-method-btn.active {
+  border-color: #0f766e;
+  background: #f0fdfa;
+  color: #0f766e;
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.12);
+}
+
+.demo-method-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Method Details Form Area */
+.demo-method-panel {
+  background: #ffffff;
+  border: 1px solid #e2eae7;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.demo-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.demo-field-group:last-child {
+  margin-bottom: 0;
+}
+
+.demo-field-group label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748b;
+}
+
+.demo-field-group input,
+.demo-field-group select {
+  width: 100%;
+  height: 42px;
+  border: 1.5px solid #e2eae7;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #12312d;
+  background: #f8fafc;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.demo-field-group input:focus,
+.demo-field-group select:focus {
+  border-color: #0f766e;
+  background: #ffffff;
+}
+
+.demo-field-hint {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* Quick Chips for UPI / Cards */
+.demo-quick-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.demo-chip {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.demo-chip:hover {
+  background: #e2e8f0;
+  color: #0f766e;
+}
+
+/* Two Column Row */
+.demo-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Action Buttons */
+.demo-actions-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.demo-pay-btn {
+  width: 100%;
+  height: 48px;
+  background: #0f766e;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.25);
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.demo-pay-btn:hover {
+  background: #0d655e;
+}
+
+.demo-pay-btn:active {
+  transform: scale(0.99);
+}
+
+.demo-cancel-btn {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  color: #64748b;
+  border: 1px solid #e2eae7;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.demo-cancel-btn:hover {
+  background: #f8fafc;
+  color: #12312d;
+}
+
+/* Subtle Failure Simulation Test Button */
+.demo-fail-btn-wrap {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.demo-fail-btn {
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #94a3b8;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  padding: 4px;
+}
+
+.demo-fail-btn:hover {
+  color: #ef4444;
+}
+
+/* =========================================
+   PROCESSING VIEW
+========================================= */
+.demo-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 10px;
+}
+
+.demo-spinner {
+  width: 52px;
+  height: 52px;
+  border: 4px solid #e2eae7;
+  border-top-color: #0f766e;
+  border-radius: 50%;
+  animation: demoSpin 0.8s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes demoSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.demo-processing-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #12312d;
+  margin-bottom: 8px;
+}
+
+.demo-processing-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  max-width: 280px;
+  line-height: 1.4;
+}
+
+/* =========================================
+   SUCCESS VIEW
+========================================= */
+.demo-success-badge {
+  width: 58px;
+  height: 58px;
+  background: #ecfdf5;
+  border: 2px solid #a7f3d0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #059669;
+  margin-bottom: 16px;
+}
+
+.demo-success-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #12312d;
+  letter-spacing: -0.3px;
+  margin-bottom: 6px;
+}
+
+.demo-success-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* Receipt Card */
+.demo-receipt-card {
+  width: 100%;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.demo-receipt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.demo-receipt-row strong {
+  color: #12312d;
+  font-weight: 600;
+  text-align: right;
+}
+
+.demo-receipt-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.demo-receipt-ref {
+  font-family: monospace;
+  font-size: 11px;
+  color: #475569;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   FAILURE VIEW
+========================================= */
+.demo-failure-badge {
+  width: 58px;
+  height: 58px;
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #dc2626;
+  margin-bottom: 16px;
+}
+
+.demo-failure-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #12312d;
+  margin-bottom: 6px;
+}
+
+.demo-failure-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 24px;
+  max-width: 320px;
+  line-height: 1.4;
+}
+
+/* Responsive Overrides */
+@media (max-width: 500px) {
+  .demo-methods-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+
+  .demo-method-btn {
+    padding: 10px 4px;
+    font-size: 11px;
+  }
+
+  .demo-two-cols {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* =========================================
+   APPOINTMENT CARD PAYMENT TAGS
+   ========================================= */
+.appointment-card-payment-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.appointment-amount-tag {
+  font-family: var(--font-heading, "Manrope", sans-serif);
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #0F766E;
+  letter-spacing: -0.2px;
+}
+
+.appointment-payment-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+  .appointment-card-payment-info {
+    align-items: flex-start;
+  }
+}
+

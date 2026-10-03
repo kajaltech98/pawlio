@@ -1,0 +1,1324 @@
+/* =========================================================
+   PAWLIO HEALTH, VACCINATIONS & REMINDERS STYLES (PHASE 5)
+   ========================================================= */
+
+/* TABS / SWITCHER */
+.health-tabs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+}
+
+.health-nav-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.health-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.health-tab-btn:hover {
+  background: var(--soft);
+  color: var(--primary);
+}
+
+.health-tab-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(46, 125, 91, 0.22);
+}
+
+.health-tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.health-tab-btn.active .health-tab-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.health-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.health-pet-select {
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 13px;
+  color: var(--dark);
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.health-pet-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* =========================================
+   HEALTH RECORDS LIST & CARDS
+========================================= */
+.health-records-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.health-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.health-card:hover {
+  border-color: #b8ded0;
+  box-shadow: 0 6px 20px rgba(23, 34, 28, 0.04);
+}
+
+.health-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.health-card-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.health-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.health-card-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.health-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.health-card-title-row h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.health-type-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--soft);
+  color: var(--primary);
+  border: 1px solid rgba(46, 125, 91, 0.2);
+}
+
+.health-card-meta {
+  font-size: 13px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.health-card-meta .pet-tag {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.health-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.health-btn-action {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.health-btn-action:hover {
+  background: var(--soft);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.health-btn-action.danger:hover {
+  background: #fdf0f0;
+  color: var(--color-error, #C65D5D);
+  border-color: rgba(198, 93, 93, 0.4);
+}
+
+.health-card-body {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+  background: #fafdfb;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border-left: 3px solid var(--primary);
+}
+
+.health-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--muted);
+  flex-wrap: wrap;
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+
+.health-vet-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+}
+
+/* =========================================
+   VACCINATIONS GRID & CARDS
+========================================= */
+.vaccinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.vaccination-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.vaccination-card:hover {
+  border-color: #b8ded0;
+  box-shadow: 0 8px 24px rgba(23, 34, 28, 0.05);
+  transform: translateY(-2px);
+}
+
+.vaccination-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vaccination-card-pet-name {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.vaccination-card-vaccine-name {
+  font-size: 18px;
+  font-weight: 750;
+  color: var(--dark);
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* STATUS BADGES */
+.vaccine-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* 1. Up to Date */
+.vaccine-status-pill.badge-up-to-date {
+  background: #eaf5ef;
+  color: var(--color-success, #2F7D62);
+  border: 1px solid rgba(47, 125, 98, 0.25);
+}
+
+/* 2. Due Soon */
+.vaccine-status-pill.badge-due-soon {
+  background: #fdf5eb;
+  color: var(--color-warning, #C98A3D);
+  border: 1px solid rgba(201, 138, 61, 0.25);
+}
+
+/* 3. Overdue */
+.vaccine-status-pill.badge-overdue {
+  background: #fdf0f0;
+  color: var(--color-error, #C65D5D);
+  border: 1px solid rgba(198, 93, 93, 0.25);
+}
+
+.vaccination-dates-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #f8fbf9;
+  border-radius: 10px;
+  border: 1px solid #edf4f0;
+}
+
+.vax-date-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vax-date-col span {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.vax-date-col strong {
+  font-size: 13px;
+  color: var(--dark);
+}
+
+.vaccination-notes {
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.4;
+  background: #fafafa;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.vaccination-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: auto;
+  border-top: 1px solid #f0f4f2;
+  padding-top: 12px;
+}
+
+.vaccination-card-actions button {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.vaccination-card-actions button:hover {
+  background: var(--soft);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.vaccination-card-actions button.danger:hover {
+  background: #fdf0f0;
+  color: var(--color-error, #C65D5D);
+  border-color: rgba(198, 93, 93, 0.4);
+}
+
+/* =========================================
+   DASHBOARD UPCOMING REMINDERS SECTION (PART 4)
+========================================= */
+.reminders-section {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.reminders-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.reminders-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reminders-header-left .bell-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #eaf5ef;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reminders-header-left h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.reminders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reminder-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fcfefd;
+  transition: all 0.2s ease;
+}
+
+.reminder-item:hover {
+  background: #ffffff;
+  border-color: #b8ded0;
+  box-shadow: 0 4px 12px rgba(23, 34, 28, 0.04);
+}
+
+.reminder-item.reminder-urgent {
+  border-color: #fed7aa;
+  background: #fffdfa;
+}
+
+.reminder-item.reminder-overdue {
+  border-color: #fecaca;
+  background: #fffbfa;
+}
+
+.reminder-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.reminder-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.reminder-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+.reminder-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.reminder-tag.tag-urgent {
+  background: #fdf5eb;
+  color: var(--color-warning, #C98A3D);
+}
+
+.reminder-tag.tag-overdue {
+  background: #fdf0f0;
+  color: var(--color-error, #C65D5D);
+}
+
+.reminder-tag.tag-upcoming {
+  background: #eaf5ef;
+  color: var(--color-success, #2F7D62);
+}
+
+.reminders-empty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px;
+  background: #f8fbf9;
+  border-radius: var(--radius-sm, 12px);
+  border: 1px solid var(--border, #E5ECE9);
+  color: var(--muted, #6B7773);
+  font-size: 13.5px;
+}
+
+.reminders-empty span {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* =========================================
+   TIMELINE STYLE FOR REMINDERS (SECTION 27)
+========================================= */
+.reminders-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 6px;
+  margin-top: 8px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 14px;
+  position: relative;
+}
+
+.timeline-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.timeline-marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
+.timeline-marker.marker-normal {
+  background: var(--color-primary-light, #EAF5F2);
+  color: var(--color-primary, #0F766E);
+}
+
+.timeline-marker.marker-urgent {
+  background: #fdf5eb;
+  color: var(--color-warning, #C98A3D);
+}
+
+.timeline-marker.marker-overdue {
+  background: #fdf0f0;
+  color: var(--color-error, #C65D5D);
+}
+
+.timeline-line {
+  flex: 1;
+  width: 2px;
+  background: var(--border, #E5ECE9);
+  margin: 4px 0;
+  min-height: 24px;
+}
+
+.timeline-content {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid var(--border, #E5ECE9);
+  border-radius: var(--radius-sm, 12px);
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 10px rgba(20, 50, 45, 0.02);
+  transition: all 0.15s ease;
+}
+
+.timeline-content:hover {
+  border-color: #bce3d9;
+  transform: translateY(-1px);
+}
+
+.timeline-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--dark, #12312D);
+}
+
+.timeline-text {
+  font-size: 13px;
+  color: var(--muted, #6B7773);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.reminders-count-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill, 9999px);
+  background: var(--color-primary-light, #EAF5F2);
+  color: var(--color-primary, #0F766E);
+}
+
+/* =========================================
+   VACCINATION SUMMARY STATS (PART 5)
+========================================= */
+.vax-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.vax-summary-chip {
+  padding: 12px 14px;
+  background: #f8fbf9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vax-summary-chip span {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.vax-summary-chip strong {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.vax-summary-chip.chip-due-soon strong {
+  color: var(--color-warning, #C98A3D);
+}
+
+.vax-summary-chip.chip-overdue strong {
+  color: var(--color-error, #C65D5D);
+}
+
+.vax-summary-chip.chip-up-to-date strong {
+  color: var(--color-success, #2F7D62);
+}
+
+/* =========================================
+   PET DETAILS HEALTH SUMMARY (PART 6)
+========================================= */
+.pet-health-summary-box {
+  background: #f7fbf9;
+  border: 1px solid #dbebe2;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-top: 14px;
+}
+
+.pet-health-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.pet-health-summary-header h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pet-health-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.pet-health-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pet-health-summary-item span {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.pet-health-summary-item strong {
+  font-size: 13px;
+  color: var(--dark);
+}
+
+.pet-health-empty {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+  padding: 4px 0;
+}
+
+/* EMPTY STATES */
+.health-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 45px 20px;
+  background: #fafdfb;
+  border: 2px dashed #d5e5dc;
+  border-radius: 14px;
+  gap: 12px;
+}
+
+.health-empty-state .empty-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #eaf5ef;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.health-empty-state p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.health-empty-state small {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 320px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .health-tabs-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .health-card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .health-card-actions {
+    align-self: flex-end;
+  }
+
+  .vaccinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vaccination-dates-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   PREMIUM VACCINATION FORM MODAL (UI/UX ENHANCEMENT)
+   ========================================================= */
+
+.vax-modal-container {
+  max-width: 680px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 25px 65px rgba(18, 49, 45, 0.22);
+  overflow: hidden;
+  border: 1px solid var(--border, #E5ECE9);
+  animation: modalScaleUp 0.22s ease-out;
+}
+
+.vax-modal-header {
+  padding: 22px 26px 18px;
+  border-bottom: 1px solid var(--border, #E5ECE9);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.vax-modal-header-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.vax-modal-icon-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--primary-light, #DDF5EF);
+  color: var(--primary, #0F766E);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.16);
+}
+
+.vax-modal-header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.vax-modal-eyebrow {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary, #0F766E);
+  margin-bottom: 2px;
+}
+
+.vax-modal-title {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--dark, #12312D);
+  line-height: 1.25;
+}
+
+.vax-modal-subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted, #6B7773);
+  line-height: 1.4;
+}
+
+.vax-modal-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.vax-modal-body {
+  padding: 22px 26px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fafdfb;
+}
+
+/* SECTION CONTAINERS */
+.vax-section-card {
+  background: #ffffff;
+  border: 1px solid var(--border, #E5ECE9);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.18s ease;
+}
+
+.vax-section-card:focus-within {
+  border-color: #a3d9c9;
+}
+
+.vax-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary, #0F766E);
+}
+
+/* PET SELECTOR & PREVIEW */
+.vax-pet-select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vax-pet-preview-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #f7fbf9;
+  border: 1px solid #dbebe2;
+  border-radius: 12px;
+}
+
+.vax-pet-preview-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--primary-light, #DDF5EF);
+  color: var(--primary, #0F766E);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.vax-pet-preview-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vax-pet-preview-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.vax-pet-preview-name {
+  font-size: 13.5px;
+  font-weight: 750;
+  color: var(--dark, #12312D);
+}
+
+.vax-pet-preview-meta {
+  font-size: 12px;
+  color: var(--muted, #6B7773);
+}
+
+/* FORM CONTROLS */
+.vax-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vax-field-group label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--dark, #12312D);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.vax-req-star {
+  color: var(--color-error, #C65D5D);
+  font-weight: 700;
+}
+
+.vax-opt-tag {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--muted, #6B7773);
+}
+
+.vax-control {
+  height: 44px;
+  padding: 0 14px;
+  background: #ffffff;
+  border: 1px solid var(--border, #E5ECE9);
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--text, #17211F);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vax-textarea {
+  height: auto;
+  min-height: 110px;
+  padding: 12px 14px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.vax-control:focus,
+.vax-textarea:focus {
+  outline: none;
+  border-color: var(--primary, #0F766E);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+}
+
+.vax-control.has-error,
+.vax-textarea.has-error {
+  border-color: var(--color-error, #C65D5D);
+  background: #fffdfc;
+}
+
+.vax-control.has-error:focus,
+.vax-textarea.has-error:focus {
+  border-color: var(--color-error, #C65D5D);
+  box-shadow: 0 0 0 3px rgba(198, 93, 93, 0.14);
+}
+
+.vax-inline-error {
+  font-size: 12px;
+  color: var(--color-error, #C65D5D);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.vax-field-helper {
+  font-size: 11.5px;
+  color: var(--muted, #6B7773);
+  margin-top: 2px;
+}
+
+/* DATES GRID */
+.vax-dates-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* STATUS SECTION CARD */
+.vax-status-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.vax-status-box.status-up-to-date {
+  background: #eaf5ef;
+  border: 1px solid rgba(47, 125, 98, 0.25);
+}
+
+.vax-status-box.status-due-soon {
+  background: #fdf5eb;
+  border: 1px solid rgba(201, 138, 61, 0.25);
+}
+
+.vax-status-box.status-overdue {
+  background: #fdf0f0;
+  border: 1px solid rgba(198, 93, 93, 0.25);
+}
+
+.vax-status-box.status-pending {
+  background: #f7f9f7;
+  border: 1px dashed #e5ece9;
+}
+
+.vax-status-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.status-up-to-date .vax-status-icon-box {
+  background: var(--color-primary-light, #EAF5F2);
+  color: var(--color-success, #2F7D62);
+}
+
+.status-due-soon .vax-status-icon-box {
+  background: #fdf5eb;
+  color: var(--color-warning, #C98A3D);
+}
+
+.status-overdue .vax-status-icon-box {
+  background: #fdf0f0;
+  color: var(--color-error, #C65D5D);
+}
+
+.status-pending .vax-status-icon-box {
+  background: #e5ece9;
+  color: var(--muted, #6B7773);
+}
+
+.vax-status-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.vax-status-headline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.vax-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.badge-pill-up-to-date {
+  background: var(--color-success, #2F7D62);
+  color: #ffffff;
+}
+
+.badge-pill-due-soon {
+  background: var(--color-warning, #C98A3D);
+  color: #ffffff;
+}
+
+.badge-pill-overdue {
+  background: var(--color-error, #C65D5D);
+  color: #ffffff;
+}
+
+.badge-pill-pending {
+  background: #6b7773;
+  color: #ffffff;
+}
+
+.vax-status-message {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark, #12312D);
+}
+
+.vax-status-caption {
+  font-size: 11.5px;
+  color: var(--muted, #6B7773);
+}
+
+/* ERROR BANNER */
+.vax-banner-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #fdf0f0;
+  border: 1px solid rgba(198, 93, 93, 0.25);
+  border-radius: 12px;
+  color: var(--color-error, #C65D5D);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* MODAL FOOTER */
+.vax-modal-footer {
+  padding: 16px 26px;
+  border-top: 1px solid var(--border, #E5ECE9);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.vax-btn-cancel {
+  height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--border, #E5ECE9);
+  background: #ffffff;
+  color: var(--dark, #12312D);
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.vax-btn-cancel:hover:not(:disabled) {
+  background: #f7f9f7;
+  border-color: #cad5d0;
+}
+
+.vax-btn-save {
+  height: 44px;
+  padding: 0 24px;
+  border: none;
+  background: var(--primary, #0F766E);
+  color: #ffffff;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.28);
+  transition: all 0.18s ease;
+  min-width: 175px;
+}
+
+.vax-btn-save:hover:not(:disabled) {
+  background: #0d6861;
+  box-shadow: 0 6px 18px rgba(15, 118, 110, 0.36);
+  transform: translateY(-1px);
+}
+
+.vax-btn-save:disabled,
+.vax-btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .vax-modal-container {
+    max-height: 94vh;
+    border-radius: 16px;
+  }
+
+  .vax-modal-header {
+    padding: 16px 18px 12px;
+  }
+
+  .vax-modal-icon-badge {
+    width: 38px;
+    height: 38px;
+  }
+
+  .vax-modal-title {
+    font-size: 19px;
+  }
+
+  .vax-modal-body {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .vax-section-card {
+    padding: 12px 14px;
+  }
+
+  .vax-dates-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .vax-modal-footer {
+    padding: 14px 18px;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .vax-btn-cancel,
+  .vax-btn-save {
+    width: 100%;
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,216 @@
+/* =========================================================
+   PAWLIO SETTINGS PAGE STYLES (PHASE 6)
+   ========================================================= */
+
+.settings-page-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-background, #F7F9F7);
+}
+
+.settings-main-content {
+  flex: 1;
+  padding: 36px 40px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  margin-bottom: 30px;
+}
+
+.settings-header h1 {
+  font-size: 28px;
+  font-weight: 750;
+  color: var(--dark);
+  margin: 0 0 6px 0;
+}
+
+.settings-header p {
+  color: var(--text);
+  font-size: 14px;
+  margin: 0;
+}
+
+.settings-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.settings-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 16px rgba(23, 34, 28, 0.03);
+}
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+}
+
+.settings-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-card-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.settings-account-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.settings-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: #f8faf9;
+  border-radius: 10px;
+  border: 1px solid #edf4f0;
+}
+
+.settings-info-item span {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.settings-info-item strong {
+  font-size: 14px;
+  color: var(--dark);
+}
+
+/* TOGGLE ROW */
+.settings-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.settings-toggle-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 650;
+  color: var(--dark);
+}
+
+.settings-toggle-info p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* SWITCH TOGGLE */
+.pawlio-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.pawlio-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pawlio-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: 0.25s ease;
+  border-radius: 34px;
+}
+
+.pawlio-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.25s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+input:checked + .pawlio-slider {
+  background-color: var(--primary);
+}
+
+input:checked + .pawlio-slider:before {
+  transform: translateX(22px);
+}
+
+/* SECURITY BUTTON */
+.btn-logout-settings {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 9px;
+  border: 1px solid rgba(198, 93, 93, 0.3);
+  background: #fdf0f0;
+  color: var(--color-error, #C65D5D);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-logout-settings:hover:not(:disabled) {
+  background: #fce8e8;
+  border-color: rgba(198, 93, 93, 0.5);
+  color: #ad4c4c;
+}
+
+.btn-logout-settings:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .settings-page-layout {
+    flex-direction: column;
+  }
+
+  .settings-main-content {
+    padding: 24px 16px;
+  }
+
+  .settings-card {
+    padding: 18px 20px;
+  }
+}

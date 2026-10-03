@@ -1,0 +1,429 @@
+/* =========================================================
+   PAWLIO NOTIFICATIONS PAGE STYLES (PHASE 6)
+   ========================================================= */
+
+.notifications-page-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-background, #F7F9F7);
+}
+
+.notifications-main-content {
+  flex: 1;
+  padding: 36px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.notifications-header-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.notifications-header-title h1 {
+  font-size: 28px;
+  font-weight: 750;
+  color: var(--dark);
+  margin: 0 0 6px 0;
+}
+
+.notifications-header-title p {
+  color: var(--text);
+  font-size: 14px;
+  margin: 0;
+}
+
+.notifications-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-test-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 9px;
+  border: 1px dashed var(--primary);
+  background: var(--soft);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-test-alert:hover:not(:disabled) {
+  background: #d4ede3;
+  border-style: solid;
+}
+
+.btn-test-alert:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-mark-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--primary);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-mark-all:hover:not(:disabled) {
+  background: var(--soft);
+  border-color: var(--primary);
+}
+
+.btn-mark-all:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* FILTER TABS */
+.notifications-filters-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.notif-filter-btn {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.notif-filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.notif-filter-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(46, 125, 91, 0.22);
+}
+
+.notif-filter-count {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.notif-filter-btn.active .notif-filter-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* NOTIFICATIONS LIST */
+.notifications-full-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notification-full-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.notification-full-card:hover {
+  box-shadow: 0 6px 20px rgba(23, 34, 28, 0.04);
+}
+
+/* UNREAD STATE */
+.notification-full-card.is-unread {
+  background: #fbfdfc;
+  border-color: #b7dfcb;
+  border-left: 4px solid var(--primary);
+}
+
+.notification-full-card.is-read {
+  opacity: 0.88;
+}
+
+.notification-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--soft);
+  color: var(--primary);
+}
+
+.notification-card-icon.type-vaccination {
+  background: #fdf5eb;
+  color: var(--color-warning, #C98A3D);
+}
+
+.notification-card-icon.type-appointment {
+  background: #eaf5ef;
+  color: var(--color-primary, #0F766E);
+}
+
+.notification-card-icon.type-health {
+  background: var(--color-primary-light, #EAF5F2);
+  color: var(--color-primary, #0F766E);
+}
+
+.notification-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.notification-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.unread-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent, #D99A5B);
+  display: inline-block;
+}
+
+.notification-card-message {
+  font-size: 13.5px;
+  color: var(--text);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.notification-card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.notification-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.btn-mark-single-read {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.btn-mark-single-read:hover {
+  background: var(--soft);
+  border-color: var(--primary);
+}
+
+.btn-mark-single-unread {
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: #fbfcfb;
+  font-size: 12px;
+  font-weight: 550;
+  color: var(--muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.btn-mark-single-unread:hover:not(:disabled) {
+  background: #ffffff;
+  color: var(--dark);
+  border-color: #bccbc4;
+}
+
+.btn-mark-single-unread:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-delete-notif {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-delete-notif:hover {
+  color: var(--color-error, #C65D5D);
+  border-color: rgba(198, 93, 93, 0.4);
+  background: #fdf0f0;
+}
+
+/* EMPTY STATE */
+.notifications-empty-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffffff;
+  border: 2px dashed #d5e5dc;
+  border-radius: 16px;
+  gap: 14px;
+}
+
+.notif-empty-icon-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notifications-empty-box h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 750;
+  color: var(--dark);
+}
+
+.notifications-empty-box p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 360px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .notifications-page-layout {
+    flex-direction: column;
+  }
+
+  .notifications-main-content {
+    padding: 20px 16px;
+  }
+
+  .notifications-header-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .notifications-header-actions {
+    justify-content: flex-start;
+  }
+
+  .notification-full-card {
+    flex-direction: column;
+  }
+
+  .notification-card-actions {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* =========================================
+   TIME GROUPED NOTIFICATIONS (SECTION 35)
+========================================= */
+.notif-time-group {
+  margin-bottom: 24px;
+}
+
+.notif-time-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted, #6B7773);
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+.notif-time-count {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--border, #E5ECE9);
+  color: var(--dark, #12312D);
+  padding: 2px 7px;
+  border-radius: 9999px;
+}
+
+.notif-time-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

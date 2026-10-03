@@ -1,0 +1,311 @@
+/* ==========================================================================
+   PAWLIO APPOINTMENT TIME PICKER
+   Professional 12-Hour Time Selector Popover
+   ========================================================================== */
+
+.pawlio-time-picker-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Trigger Button Styled as Form Input */
+.pawlio-time-trigger {
+  width: 100%;
+  height: 52px;
+  background: #ffffff;
+  border: 1.5px solid #e2eae7;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: #12312d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  text-align: left;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.pawlio-time-trigger:hover {
+  border-color: #cbd5e1;
+}
+
+.pawlio-time-trigger:focus-visible,
+.pawlio-time-trigger.is-open {
+  outline: none;
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+}
+
+.pawlio-time-trigger.has-error {
+  border-color: #ef4444;
+  background-color: #fffbfb;
+}
+
+.pawlio-time-trigger.has-error:focus-visible {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.pawlio-time-trigger-value {
+  color: #12312d;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.pawlio-time-trigger-placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.pawlio-time-trigger-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f766e;
+  margin-left: 8px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.pawlio-time-trigger.is-open .pawlio-time-trigger-icon {
+  transform: rotate(15deg);
+}
+
+/* Popover Panel */
+.pawlio-time-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  max-width: 100vw;
+  background: #ffffff;
+  border: 1px solid #e2eae7;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px -10px rgba(18, 49, 45, 0.2), 0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 18px;
+  z-index: 10005;
+  box-sizing: border-box;
+  animation: pawlioTimePopoverFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes pawlioTimePopoverFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.pawlio-time-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.pawlio-time-popover-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #12312d;
+  letter-spacing: -0.1px;
+}
+
+.pawlio-time-popover-close {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.pawlio-time-popover-close:hover {
+  color: #0f766e;
+  background-color: #f1f5f9;
+}
+
+/* 3-Column Selectors Grid */
+.pawlio-time-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.pawlio-time-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pawlio-time-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #64748b;
+}
+
+.pawlio-time-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.pawlio-time-select {
+  width: 100%;
+  height: 44px;
+  background: #f8fafc;
+  border: 1.5px solid #e2eae7;
+  border-radius: 10px;
+  padding: 0 28px 0 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #12312d;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.pawlio-time-select:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.pawlio-time-select:focus {
+  background: #ffffff;
+  border-color: #0f766e;
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.15);
+}
+
+.pawlio-time-select-chevron {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+}
+
+/* Selected Time Preview Card */
+.pawlio-time-preview-card {
+  background: #f0fdfa;
+  border: 1px solid #ccfbf1;
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.pawlio-time-preview-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.pawlio-time-preview-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #0d9488;
+}
+
+.pawlio-time-preview-hint {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.pawlio-time-preview-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f766e;
+  letter-spacing: 0.5px;
+  font-variant-numeric: tabular-nums;
+  font-family: inherit;
+}
+
+/* Popover Action Buttons */
+.pawlio-time-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.pawlio-time-btn-done {
+  flex: 1;
+  height: 42px;
+  background: #0f766e;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.pawlio-time-btn-done:hover {
+  background: #0d655e;
+}
+
+.pawlio-time-btn-done:active {
+  transform: scale(0.99);
+}
+
+.pawlio-time-btn-done:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+/* Mobile & Small Screen Adaptations */
+@media (max-width: 500px) {
+  .pawlio-time-popover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .pawlio-time-grid {
+    gap: 8px;
+  }
+
+  .pawlio-time-select {
+    padding: 0 24px 0 8px;
+    font-size: 14px;
+  }
+
+  .pawlio-time-preview-value {
+    font-size: 16px;
+  }
+}
